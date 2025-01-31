@@ -10,8 +10,14 @@
         <h2>llune's blog</h2>
     </div>
 
-    <article>
-        <time datetime=""></time>
-    </article>
+    {% for post in posts %}
+        <div>
+            <article>
+                <time datetime="">published: {{ post.published_date }}</time>
+                <h3><a href="">{{ post.title }}</a></h3>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </article>
+        </div>
+    {% endfor %}
 </body>
 </html>
