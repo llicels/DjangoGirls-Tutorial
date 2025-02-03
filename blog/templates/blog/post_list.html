@@ -1,41 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=IBM+Plex+Sans:ital,
-wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&
-family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,
-900&family=Sixtyfour+Convergence&family=Young+Serif&display=swap" rel="stylesheet">
-    <title>llune's blog</title>
-</head>
-<body>
-    <div class="content">
-    <div class="header">
-        <h2 class="titlefont">llune's blog</h2>
-        <div class="flex-container">
-            <img src="https://99gifshop.neocities.org/items/3/Snake88.gif" alt="">
-            <h5>welcome to my corner of the web</h5>
-        </div>
-        
-    </div>
+{% extends 'blog/base.html' %}
 
+{% block content %}
     {% for post in posts %}
         <div class="post">
             <article>
-                <h3 class="posttitle"><a href="">{{ post.title }}</a></h3>
+                <h3 class="posttitle"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
                 <p>{{ post.text|linebreaksbr }}</p>
                 <time datetime="">published: {{ post.published_date }}</time>
 
             </article>
         </div>
     {% endfor %}
-</div>
-</body>
-</html>
+{% endblock %}
+
