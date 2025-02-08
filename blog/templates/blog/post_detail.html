@@ -3,6 +3,13 @@
 {% block content %}
 <div class="post">
     <article>
+        <aside>
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_edit' pk=post.pk %}">
+                Edit Post
+            </a>
+            {% endif %}
+        </aside>
         <h3 class="posttitle">{{ post.title }}</h3>
         <p>{{ post.text|linebreaksbr }}</p>
         <time datetime="">published: {{ post.published_date }}</time>

@@ -1,5 +1,5 @@
 body{
-    font-family: "IBM Plex Sans", serif;
+    font-family: "Cagliostro", serif;
 }
 
 .flex-container{
@@ -8,19 +8,14 @@ body{
     width: 50%;
 }
 .titlefont {
-    font-family: "Sixtyfour Convergence", serif;
-    font-optical-sizing: auto;
+    font-family: "Permanent Marker", serif;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-      "BLED" 0,
-      "SCAN" 0,
-      "XELA" 0,
-      "YELA" 0;
+    color: #6B0504;
   }
 
 .content{
-    background-color: aliceblue;
+    background-color: #DAE378;
     width: 50%;
     margin: auto;
     padding-bottom: 10%;
@@ -33,7 +28,7 @@ body{
 
 .post{
     width: 60%;
-    background-color: rgb(243, 211, 211);
+    background-color: #FBFFFE;
     border-radius: 2%;
     margin: auto;
     padding: 3%;
@@ -41,12 +36,40 @@ body{
 }
 
 .posttitle{
-    font-family: "Barriecito", serif;
+    font-family: "Permanent Marker", serif;
     font-weight: 200;
+    color: #576CA8;
 }
 
 a{
     text-decoration: none;
-    color: deeppink;
+    color: #576CA8;
+}
+
+.makePost{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    width: 80%;
+    font-family: "Cagliostro", serif;
+    border-radius: 2%;
+}
+
+input{
+    font-family: "Cagliostro", serif;
+    border-radius: 2%;
+}
+
+button{
+    background-color: #576CA8;
+    color: #FBFFFE;
+    border: #576CA8;
+    font-family: "Cagliostro", serif;
+    width: 30%;
+    height: 20%;
 }
 
